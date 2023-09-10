@@ -39,7 +39,7 @@ function html() {
 }
 
 function css() {
-    return src(['scss/**/*.scss', '!dist/**'])
+    return src(['scss/**/style.scss', '!dist/**'])
         .pipe(sass().on('error', sass.logError))
         .pipe(webpCss({webpClass: '.webp', noWebpClass: '.no-webp'}))
         .pipe(cleanCSS())
